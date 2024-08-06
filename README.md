@@ -1,10 +1,10 @@
 # Keskop Web Site Chatbot
 
-Bu proje, bir web sitesine entegre edilebilen bir chatbot'un oluşturulmasını ve yapılandırılmasını sağlar. Chatbot, kullanıcı etkileşimlerini yönetmek ve çeşitli sorulara otomatik yanıtlar vermek için tasarlanmıştır.
+This project provides the creation and configuration of a chatbot that can be integrated into a website. The chatbot is designed to manage user interactions and provide automatic responses to various questions.
 
-## Özellikler
-- Kullanıcıların sıkça sorulan sorularına hızlı ve doğru yanıtlar verme
-- Kullanıcı etkileşimlerini takip etme ve analiz etme
-- Kolayca özelleştirilebilen ve genişletilebilen yapı
-- Web sitesi ile sorunsuz entegrasyon
+## Features
+- Providing quick and accurate answers to frequently asked questions
+- Tracking and analyzing user interactions
+- Easily customizable and expandable structure
+- Seamless integration with the website
 
