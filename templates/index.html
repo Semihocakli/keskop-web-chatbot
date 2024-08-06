@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Uygulaması</title>
+</head>
+<body>
+    <h1>Chatbot Uygulaması</h1>
+    <form id="chatbot-form">
+        <label for="user-input">Sorunuzu yazın veya ID girin:</label><br>
+        <input type="text" id="user-input" name="user_input" required><br><br>
+        <button type="submit">Gönder</button>
+    </form>
+    <div id="chatbot-response"></div>
+
+    <script>
+        document.getElementById('chatbot-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var userInput = document.getElementById('user-input').value;
+
+            fetch('/chatbot', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'user_input=' + userInput
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('chatbot-response').innerHTML = '<p><strong>Cevap:</strong> ' + data.response + '</p>';
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
